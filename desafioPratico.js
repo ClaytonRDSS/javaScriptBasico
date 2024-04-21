@@ -10,7 +10,7 @@ var impostoARecolher = 0
 var descontoPorDependente = 0
 var salarioLiquido = 0
 
-//i­ndice 0 = total salário bruto, ÃIndice 1 = total imposto a recolher, I­ndice 2 = total salÃ¡rio lÃ­quido
+//i­ndice 0 = total salário bruto, Indice 1 = total imposto a recolher, I­ndice 2 = total salário li­quido
 var dadosAcumulados = [0, 0, 0]
 
 while(continuar == "sim" || continuar == "s" || continuar == "") {
