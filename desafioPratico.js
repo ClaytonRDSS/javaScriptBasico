@@ -49,12 +49,12 @@ while(continuar == "sim" || continuar == "s" || continuar == "") {
     dadosAcumulados[2] = dadosAcumulados[2] + salarioLiquido
 
     console.log(`Calculo de pagamento do(a) ${nome}:`)
-    console.log(`Salário bruto: ${salarioBruto.toFixed(2)}, imposto a recolher: R$ ${impostoARecolher.toFixed(2)}, salário liquido: R$ ${salarioLiquido.toFixed(2)}`)
+    console.log(`Salário bruto: ${salarioBruto.toFixed(2)}, imposto a recolher: R$ ${impostoARecolher.toFixed(2)}, Salário liquido: R$ ${salarioLiquido.toFixed(2)}`)
 
-    continuar = prompt("Deseja realizar uma nova entrada? ")
+    continuar = prompt("Deseja realizar uma nova entrada?: ")
 }
 
 console.log("Valores totais da folha de pagamento:")
 console.log(`Soma salário bruto:  R$ ${dadosAcumulados[0].toFixed(2)}`)
 console.log(`Soma imposto a recolher:  R$ ${dadosAcumulados[1].toFixed(2)}`)
-console.log(`Soma salÃ¡rio liquido:  R$ ${dadosAcumulados[2].toFixed(2)}`)
+console.log(`Soma salário liquido:  R$ ${dadosAcumulados[2].toFixed(2)}`)
