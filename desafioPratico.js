@@ -7,7 +7,7 @@ var quantidadeDependentes = 0
 var aliquota = 0
 var deducao = 0
 var impostoARecolher = 0
-var descontoPorDependente = 0
+var descontoPorDependente = 189.59
 var salarioLiquido = 0
 
 //i­ndice 0 = total salário bruto, Indice 1 = total imposto a recolher, I­ndice 2 = total salário li­quido
@@ -19,10 +19,7 @@ while(continuar == "sim" || continuar == "s" || continuar == "") {
 
     salarioBruto = Number(prompt("Informe o salário bruto: "))
 
-    quantidadeDependentes = Number(prompt("Informe a quantidade de dependentes: "))
-
-    descontoPorDependente = 189.59
-    salarioLiquido = 0
+    quantidadeDependentes = Number(prompt("Informe a quantidade de dependentes: "))   
 
     if(salarioBruto >= 0 && salarioBruto <= 1903.98) {
         aliquota = 0
@@ -44,15 +41,18 @@ while(continuar == "sim" || continuar == "s" || continuar == "") {
     impostoARecolher = (salarioBruto * aliquota) - deducao - (quantidadeDependentes * descontoPorDependente)
     salarioLiquido = salarioBruto - impostoARecolher
 
+    
     dadosAcumulados[0] = dadosAcumulados[0] + salarioBruto
     dadosAcumulados[1] = dadosAcumulados[1] + impostoARecolher
     dadosAcumulados[2] = dadosAcumulados[2] + salarioLiquido
-
+    
     console.log(`Calculo de pagamento do(a) ${nome}:`)
     console.log(`Salário bruto: ${salarioBruto.toFixed(2)}, imposto a recolher: R$ ${impostoARecolher.toFixed(2)}, Salário liquido: R$ ${salarioLiquido.toFixed(2)}`)
 
     continuar = prompt("Deseja realizar uma nova entrada?: ")
 }
+
+
 
 console.log("Valores totais da folha de pagamento:")
 console.log(`Soma salário bruto:  R$ ${dadosAcumulados[0].toFixed(2)}`)
